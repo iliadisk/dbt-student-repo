@@ -1,6 +1,6 @@
 WITH src_Reviews AS 
 (
-    SELECT * FROM AIRBNB.RAW.RAW_REVIEWS
+    SELECT * FROM {{ source('airbnb', 'reviews') }}
 )
     SELECT
         comments as review_text,
